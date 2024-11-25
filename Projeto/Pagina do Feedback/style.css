@@ -1,71 +1,67 @@
+/* Reset de margens e paddings para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos do corpo da página */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; 
+    flex-direction: column;
+    height: 100%;
 }
 
-.report-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
+/* Estilos da navbar */
+.navbar {
+    padding: 15px 10px; 
+}
+
+.navbar-toggler {
+    border-color: #e0c816;
+}
+
+/* Estilos da seção principal */
+.section {
+    padding-top: 90px;
+    padding-bottom: 30px; 
+    margin-top: 0;
+}
+
+/* Estilos do card */
+.card {
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px; 
-    text-align: left;
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
+/* Estilos para as imagens dentro do card */
+.imagem {
     text-align: center;
+    margin-top: 20px;
 }
 
-.input-group {
-    margin-bottom: 20px;
+.imagem img {
+    max-width: 100%;
+    height: auto;
 }
 
-label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-    font-size: 16px;
-}
-
-input[type="text"], input[type="file"], textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus, input[type="file"]:focus, textarea:focus {
-    border-color: #4CAF50; 
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
+/* Estilos para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
     width: 100%;
     padding: 15px;
-    background-color: #e0c816; 
+    background-color: #e0c816;
     color: white;
     border: none;
     border-radius: 8px;
@@ -75,83 +71,134 @@ button {
 }
 
 button:hover {
-    background-color: #b6a701; 
+    background-color: #b6a701;
 }
 
 button:active {
-    background-color: #9c9202; 
+    background-color: #9c9202;
 }
 
+/* Estilos para o input file */
 input[type="file"] {
-    padding: 5px;
+    padding: 10px;
     font-size: 14px;
 }
 
 input[type="file"]::-webkit-file-upload-button {
     background-color: #e0c816;
     color: white;
-    border: none;
     border-radius: 8px;
-    padding: 10px;
     font-size: 14px;
     cursor: pointer;
 }
 
-input[type="file"]::-webkit-file-upload-button:hover {
-    background-color: #b6a701;
-}
-
 input[type="file"]:focus {
-    border-color: #9c9202; 
+    border-color: #9c9202;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    .report-container {
-        padding: 20px;
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    button {
-        font-size: 16px;
-    }
-}
-
-.logo{
-    font-family: Doto;
-    font-size: 33px;
-}
-
+/* Estilos para os links de navegação */
 .nav-link {
     color: #ffc107;
 }
 
-.nav-link:hover{
-    color: #dca707; 
+.nav-link:hover {
+    color: #dca707;
 }
 
-.nav-link a {
-    color: #ffc107; 
-  }
-
-.nav-link a:hover {
-    color: #dca707; 
-    text-decoration: underline; 
-  }
-
-.card {
-    margin-top: 300px;
-    margin-bottom: 50px;
-    margin-right: 350px;
+/* Estilos do rodapé */
+footer {
+    background-color: #1b2e35;
+    color: #fff;
+    padding: 20px 0;
 }
 
-.imagem {
-    margin-top: 250px;
+footer .nav {
+    justify-content: center;
+}
+
+footer .text-light {
+    font-size: 14px;
+    text-align: center;
+}
+
+footer .nav i {
+    font-size: 24px;
+    color: #ffc107;
+    margin: 0 10px;
+}
+
+footer .nav i:hover {
+    color: #dca707;
+}
+
+/* GAMBIARRA Q DEU CERTO */
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .section {
+        padding-top: 70px; 
+        padding-bottom: 20px; 
+    }
+
+    .card {
+        margin: 0 auto 20px auto;
+        width: 90%; 
+    }
+
+    .imagem {
+        margin-top: 10px;
+    }
+
+    button {
+        font-size: 16px; 
+        padding: 12px;
+    }
+
+    footer .nav i {
+        font-size: 20px;
+    }
+
+    footer .text-light {
+        font-size: 12px; 
+    }
+}
+
+/* Para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    body {
+        padding: 0 10px; 
+    }
+
+    .card {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .nav-link {
+        font-size: 14px; 
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    footer .text-light {
+        font-size: 10px;
+    }
+
+    .navbar-brand span {
+        font-size: 24px; 
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+}
+
+footer {
+    width: 100%;
 }
