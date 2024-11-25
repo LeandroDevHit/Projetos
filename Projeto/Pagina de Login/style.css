@@ -1,0 +1,32 @@
+body{
+    background-image: url(img/CidadeBonita.jpg);
+    background-size: cover;
+}
+
+.formulario {
+    border: none;
+}
+
+.button1 a{
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+.gradient-custom-2 {
+
+    background: #fccb90;
+    
+    background: linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,149,29,1) 50%, rgba(255,193,7,1) 100%);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
